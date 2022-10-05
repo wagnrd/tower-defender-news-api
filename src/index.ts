@@ -21,10 +21,6 @@ const db = new Kysely<Database>({
 })
 
 app.get("/article", async (reqest, response) => {
-    const date = new Date();
-    const timestamp = `${date.getUTCFullYear()}-${date.getUTCMonth()}-${date.getUTCDate()} ${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`;
-    console.log(timestamp);
-
     const articles = await db.selectFrom("article")
         .selectAll()
         .where("publishedAt", "<=", new Date())
