@@ -11,7 +11,12 @@ interface ArticleDAO {
     thumbnailUrl: string;
 }
 
+interface HealthDAO {
+    test: string;
+}
+
 interface DatabaseDAO {
+    health: HealthDAO;
     article: ArticleDAO;
 }
 
