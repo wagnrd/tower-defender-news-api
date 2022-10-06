@@ -1,0 +1,7 @@
+### GET all articles
+GET {{host}}/article
+Accept: application/json
+
+### GET article by id
+GET {{host}}/article/6
+Accept: application/json

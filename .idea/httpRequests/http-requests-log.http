@@ -1,0 +1,118 @@
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T145718.200.json
+
+###
+
+GET http://localhost:3000/article/6
+Accept: application/json
+
+<> 2022-10-06T145715.200.json
+
+###
+
+GET http://localhost:3000/article/5
+Accept: application/json
+
+<> 2022-10-06T145709.404.txt
+
+###
+
+GET http://localhost:3000/article/5
+Accept: application/json
+
+<> 2022-10-06T145348.404.txt
+
+###
+
+GET http://localhost:3000/article/6
+Accept: application/json
+
+<> 2022-10-06T145341.200.json
+
+###
+
+GET http://localhost:3000/article/5
+Accept: application/json
+
+<> 2022-10-06T145320.404.txt
+
+###
+
+GET http://localhost:3000/article/5
+Accept: application/json
+
+<> 2022-10-06T145242.404.txt
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T145239.200.json
+
+###
+
+GET http://localhost:3000/article/5
+Accept: application/json
+
+<> 2022-10-06T144949.404.txt
+
+###
+
+GET http://localhost:3000/article/6
+Accept: application/json
+
+<> 2022-10-06T143344.200.json
+
+###
+
+GET http://localhost:3000/article/7
+Accept: application/json
+
+<> 2022-10-06T143248.200.json
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T143246.200.json
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T140553.200.json
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T140322.200.json
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T140221.200.json
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T140130.200.json
+
+###
+
+GET http://localhost:3000/article
+Accept: application/json
+
+<> 2022-10-06T132711.200.json
+
+###

@@ -1,5 +1,5 @@
 import {Generated, Kysely, MysqlDialect} from "kysely";
-import Pool from "mysql2/typings/mysql/lib/Pool";
+import {createPool} from "mysql2";
 
 interface ArticleDAO {
     id: Generated<number>;
@@ -11,8 +11,20 @@ interface ArticleDAO {
     thumbnailUrl: string;
 }
 
-interface Database {
+interface DatabaseDAO {
     article: ArticleDAO;
 }
 
-export {Database, ArticleDAO};
+const database = new Kysely<DatabaseDAO>({
+    dialect: new MysqlDialect({
+        pool: createPool({
+            host: process.env.MYSQL_HOST,
+            port: Number.parseInt(process.env.MYSQL_PORT, 10),
+            database: process.env.MYSQL_DATABASE,
+            user: process.env.MYSQL_USER,
+            password: process.env.MYSQL_PASSWORD
+        })
+    })
+})
+
+export {database};
