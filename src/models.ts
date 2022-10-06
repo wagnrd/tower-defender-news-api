@@ -36,7 +36,7 @@ function toArticle(arbitraryArticle: any): Article {
         headline: arbitraryArticle.headline,
         body: arbitraryArticle.body,
         date: arbitraryArticle.publishedAt
-    }
+    };
 }
 
 function toArticleArray(arbitraryArticles: any[]): Article[] {
@@ -55,7 +55,7 @@ function toArticlePreview(arbitraryArticle: any): ArticlePreview {
         description: arbitraryArticle.description,
         date: arbitraryArticle.publishedAt,
         thumbnailUrl: arbitraryArticle.thumbnailUrl
-    }
+    };
 }
 
 function toArticlePreviewArray(arbitraryArticles: any[]): ArticlePreview[] {

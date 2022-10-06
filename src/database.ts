@@ -25,6 +25,6 @@ const database = new Kysely<DatabaseDAO>({
             password: process.env.MYSQL_PASSWORD
         })
     })
-})
+});
 
 export {database};

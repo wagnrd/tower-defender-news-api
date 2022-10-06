@@ -1,118 +1,349 @@
-GET http://localhost:3000/article
-Accept: application/json
-
-<> 2022-10-06T145718.200.json
-
-###
-
-GET http://localhost:3000/article/6
-Accept: application/json
-
-<> 2022-10-06T145715.200.json
-
-###
-
-GET http://localhost:3000/article/5
-Accept: application/json
-
-<> 2022-10-06T145709.404.txt
-
-###
-
-GET http://localhost:3000/article/5
-Accept: application/json
-
-<> 2022-10-06T145348.404.txt
-
-###
-
-GET http://localhost:3000/article/6
-Accept: application/json
-
-<> 2022-10-06T145341.200.json
-
-###
-
-GET http://localhost:3000/article/5
-Accept: application/json
-
-<> 2022-10-06T145320.404.txt
-
-###
-
-GET http://localhost:3000/article/5
-Accept: application/json
-
-<> 2022-10-06T145242.404.txt
-
-###
-
-GET http://localhost:3000/article
-Accept: application/json
-
-<> 2022-10-06T145239.200.json
-
-###
-
-GET http://localhost:3000/article/5
-Accept: application/json
-
-<> 2022-10-06T144949.404.txt
-
-###
-
-GET http://localhost:3000/article/6
-Accept: application/json
-
-<> 2022-10-06T143344.200.json
-
-###
-
 GET http://localhost:3000/article/7
 Accept: application/json
 
-<> 2022-10-06T143248.200.json
+<> 2022-10-06T162939.200.json
+
+###
+
+GET http://localhost:3000/article/2
+Accept: application/json
+
+<> 2022-10-06T162933.404.txt
+
+###
+
+GET http://localhost:3000/article/sdf
+Accept: application/json
+
+<> 2022-10-06T162929.400.json
+
+###
+
+GET http://localhost:3000/article/6
+Accept: application/json
+
+<> 2022-10-06T162924.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T162806.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1
+Accept: application/json
+
+<> 2022-10-06T162753.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T162747.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=2
+Accept: application/json
+
+<> 2022-10-06T162743.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T162738.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T162731.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=2&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T162705.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=2&offset=1
+Accept: application/json
+
+<> 2022-10-06T162650.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T162639.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T162559.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T161943.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161929.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161928.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T161913.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T161700.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161648.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161509.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T161457.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161334.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161230.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T161103.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T160922.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T160850.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T160835.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T160831.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T160829.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T160823.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T160815.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T160808.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T160403.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=2
+Accept: application/json
+
+<> 2022-10-06T160354.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=2
+Accept: application/json
+
+<> 2022-10-06T160344.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T160336.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1
+Accept: application/json
+
+<> 2022-10-06T160329.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=3
+Accept: application/json
+
+<> 2022-10-06T160323.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=0
+Accept: application/json
+
+<> 2022-10-06T160317.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1
+Accept: application/json
+
+<> 2022-10-06T160313.200.json
+
+###
+
+GET http://localhost:3000/article/preview?test=
+Accept: application/json
+
+<> 2022-10-06T160305.200.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-06T160253.200.json
 
 ###
 
 GET http://localhost:3000/article
 Accept: application/json
 
-<> 2022-10-06T143246.200.json
+<> 2022-10-06T160224.404.html
+
+###
+
+GET http://localhost:3000/article/6
+Accept: application/json
+
+<> 2022-10-06T160223.400.json
+
+###
+
+GET http://localhost:3000/article/2.5
+Accept: application/json
+
+<> 2022-10-06T160212.400.json
 
 ###
 
 GET http://localhost:3000/article
 Accept: application/json
 
-<> 2022-10-06T140553.200.json
+<> 2022-10-06T160201.404.html
 
 ###
 
-GET http://localhost:3000/article
+GET http://localhost:3000/article/
 Accept: application/json
 
-<> 2022-10-06T140322.200.json
+<> 2022-10-06T160058.404.html
 
 ###
 
-GET http://localhost:3000/article
+GET http://localhost:3000/article/asdf
 Accept: application/json
 
-<> 2022-10-06T140221.200.json
+<> 2022-10-06T160052.400.json
 
 ###
 
-GET http://localhost:3000/article
+GET http://localhost:3000/article/5
 Accept: application/json
 
-<> 2022-10-06T140130.200.json
-
-###
-
-GET http://localhost:3000/article
-Accept: application/json
-
-<> 2022-10-06T132711.200.json
+<> 2022-10-06T155829.404.txt
 
 ###
