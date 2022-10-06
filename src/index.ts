@@ -5,7 +5,7 @@ import {publicHealthCheckController} from "./controllers/heath-check-controller"
 const port = process.env.PORT || 3000;
 const app = express();
 
-app.use("/healthz", publicHealthCheckController);
+app.use("/health", publicHealthCheckController);
 app.use("/article", publicArticleController);
 
 app.listen(port, () => {

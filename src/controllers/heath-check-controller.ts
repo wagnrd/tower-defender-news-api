@@ -4,11 +4,13 @@ import {database} from "../database";
 const publicHealthCheckController = Router();
 
 publicHealthCheckController.get("/", async (request, response) => {
-    let health = await database.selectFrom("health")
+    const health = await database.selectFrom("health")
         .selectAll()
         .executeTakeFirst();
 
-    if (health.test !== "works")
+    if (health.test === "works")
+        response.sendStatus(200);
+    else
         response.sendStatus(500);
 });
 

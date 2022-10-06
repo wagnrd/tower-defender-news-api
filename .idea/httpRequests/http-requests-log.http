@@ -1,3 +1,31 @@
+GET http://localhost:3000/health
+Accept: application/json
+
+<> 2022-10-06T170056.200.txt
+
+###
+
+GET http://localhost:3000/healthz
+Accept: application/json
+
+<> 2022-10-06T165914.200.txt
+
+###
+
+GET http://localhost:3000/healthz
+Accept: application/json
+
+<> 2022-10-06T165902.200.txt
+
+###
+
+GET http://localhost:3000/healthz
+Accept: application/json
+
+<> 2022-10-06T165840.200.txt
+
+###
+
 GET http://localhost:3000/article/7
 Accept: application/json
 
@@ -317,33 +345,5 @@ GET http://localhost:3000/article/2.5
 Accept: application/json
 
 <> 2022-10-06T160212.400.json
-
-###
-
-GET http://localhost:3000/article
-Accept: application/json
-
-<> 2022-10-06T160201.404.html
-
-###
-
-GET http://localhost:3000/article/
-Accept: application/json
-
-<> 2022-10-06T160058.404.html
-
-###
-
-GET http://localhost:3000/article/asdf
-Accept: application/json
-
-<> 2022-10-06T160052.400.json
-
-###
-
-GET http://localhost:3000/article/5
-Accept: application/json
-
-<> 2022-10-06T155829.404.txt
 
 ###
