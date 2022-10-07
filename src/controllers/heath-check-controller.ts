@@ -9,7 +9,7 @@ publicHealthCheckController.get("/", async (request, response) => {
         .executeTakeFirst();
 
     if (health.test === "works")
-        response.sendStatus(200);
+        response.sendStatus(204);
     else
         response.sendStatus(500);
 });
