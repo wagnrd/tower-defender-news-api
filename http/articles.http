@@ -3,5 +3,5 @@ GET {{host}}/article/preview
 Accept: application/json
 
 ### GET article by id
-GET {{host}}/article/8
+GET {{host}}/article/9
 Accept: application/json

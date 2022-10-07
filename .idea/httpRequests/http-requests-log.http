@@ -1,0 +1,343 @@
+GET https://tower-defender-news-api.onrender.com/health
+Accept: application/json
+
+###
+
+GET http://localhost:3000/article/9
+Accept: application/json
+
+<> 2022-10-07T170904.200.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-07T170859.200.json
+
+###
+
+GET http://localhost:3000/article/8
+Accept: application/json
+
+<> 2022-10-07T164930.404.txt
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-07T164925.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview
+Accept: application/json
+
+<> 2022-10-07T163333.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview
+Accept: application/json
+
+<> 2022-10-07T163112.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/health
+Accept: application/json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/health
+Accept: application/json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/8
+Accept: application/json
+
+<> 2022-10-07T161733.404.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/asd
+Accept: application/json
+
+<> 2022-10-07T161725.400.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview
+Accept: application/json
+
+<> 2022-10-07T161708.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/8
+Accept: application/json
+
+<> 2022-10-07T161707.404.txt
+
+###
+
+GET http://localhost:3000/article/8
+Accept: application/json
+
+<> 2022-10-07T161657.200.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-07T161654.200.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-07T161521.200.json
+
+###
+
+GET http://localhost:3000/article/8
+Accept: application/json
+
+<> 2022-10-07T161519.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/8
+Accept: application/json
+
+<> 2022-10-07T161457.404.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/7
+Accept: application/json
+
+<> 2022-10-07T161450.404.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview
+Accept: application/json
+
+<> 2022-10-07T161449.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview
+Accept: application/json
+
+<> 2022-10-07T161353.200.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-07T161341.200.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-10-07T161310.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview
+Accept: application/json
+
+<> 2022-10-07T161117.200.json
+
+###
+
+GET https://news.yatd.wagnrd.de/health
+Accept: application/json
+
+<> 2022-10-07T141442.200.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/health
+Accept: application/json
+
+<> 2022-10-07T122501.200.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/health
+Accept: application/json
+
+<> 2022-10-06T172903.200.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/health
+Accept: application/json
+
+<> 2022-10-06T172619.200.txt
+
+###
+
+GET http://localhost:3000/health
+Accept: application/json
+
+<> 2022-10-06T172614.200.txt
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/7
+Accept: application/json
+
+<> 2022-10-06T172415.200.json
+
+###
+
+GET https://tower-defender-news-api.onrender.com/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T172412.200.json
+
+###
+
+GET http://localhost:3000/health
+Accept: application/json
+
+<> 2022-10-06T170056.200.txt
+
+###
+
+GET http://localhost:3000/healthz
+Accept: application/json
+
+<> 2022-10-06T165914.200.txt
+
+###
+
+GET http://localhost:3000/healthz
+Accept: application/json
+
+<> 2022-10-06T165902.200.txt
+
+###
+
+GET http://localhost:3000/healthz
+Accept: application/json
+
+<> 2022-10-06T165840.200.txt
+
+###
+
+GET http://localhost:3000/article/7
+Accept: application/json
+
+<> 2022-10-06T162939.200.json
+
+###
+
+GET http://localhost:3000/article/2
+Accept: application/json
+
+<> 2022-10-06T162933.404.txt
+
+###
+
+GET http://localhost:3000/article/sdf
+Accept: application/json
+
+<> 2022-10-06T162929.400.json
+
+###
+
+GET http://localhost:3000/article/6
+Accept: application/json
+
+<> 2022-10-06T162924.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T162806.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1
+Accept: application/json
+
+<> 2022-10-06T162753.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=1
+Accept: application/json
+
+<> 2022-10-06T162747.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=2
+Accept: application/json
+
+<> 2022-10-06T162743.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=1&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T162738.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T162731.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=2&offset=asdf
+Accept: application/json
+
+<> 2022-10-06T162705.400.json
+
+###
+
+GET http://localhost:3000/article/preview?count=2&offset=1
+Accept: application/json
+
+<> 2022-10-06T162650.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T162639.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T162559.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=asdf&offset=1
+Accept: application/json
+
+<> 2022-10-06T161943.400.json
+
+###

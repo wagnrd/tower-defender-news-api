@@ -3,8 +3,8 @@ import {createPool} from "mysql2";
 
 interface ArticleDAO {
     id: Generated<number>;
-    createdAt: number;
-    publishedAt: number;
+    creationTimestamp: number;
+    publishTimestamp: number;
     headline: string;
     body: string;
     description: string;

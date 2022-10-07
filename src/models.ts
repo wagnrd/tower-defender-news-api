@@ -1,15 +1,13 @@
-import {publicArticleController} from "./controllers/article-controller";
-
 interface Article {
     id: number;
-    date: Date;
+    timestamp: number;
     headline: string;
     body: string;
 }
 
 interface ArticlePreview {
     id: Article;
-    date: Date;
+    timestamp: number;
     thumbnailUrl: string;
     headline: string;
     description: string;
@@ -17,8 +15,8 @@ interface ArticlePreview {
 
 interface ArticleWithDetails {
     id: number;
-    createdAt: Date;
-    publishedAt: Date;
+    creationTimestamp: number;
+    publishTimestamp: number;
     thumbnailUrl: string;
     headline: string;
     body: string;
@@ -35,7 +33,7 @@ function toArticle(arbitraryArticle: any): Article {
         id: arbitraryArticle.id,
         headline: arbitraryArticle.headline,
         body: arbitraryArticle.body,
-        date: arbitraryArticle.publishedAt
+        timestamp: arbitraryArticle.publishTimestamp
     };
 }
 
@@ -53,7 +51,7 @@ function toArticlePreview(arbitraryArticle: any): ArticlePreview {
         id: arbitraryArticle.id,
         headline: arbitraryArticle.headline,
         description: arbitraryArticle.description,
-        date: arbitraryArticle.publishedAt,
+        timestamp: arbitraryArticle.publishTimestamp,
         thumbnailUrl: arbitraryArticle.thumbnailUrl
     };
 }
