@@ -29,7 +29,7 @@ publicArticleController.get("/preview", async (request, response) => {
 
     const articles = await database.selectFrom("article")
         .select(["id", "headline", "description", "publishedAt", "thumbnailUrl"])
-        .where("publishedAt", "<=", new Date())
+        .where("publishedAt", "<=", Date.now())
         .orderBy("publishedAt", "desc")
         .offset(offset)
         .limit(count)
@@ -60,7 +60,7 @@ publicArticleController.get("/:id", async (request, response) => {
     const article = await database.selectFrom("article")
         .select(["id", "headline", "body", "publishedAt"])
         .where("id", "=", articleId)
-        .where("publishedAt", "<=", new Date())
+        .where("publishedAt", "<=", Date.now())
         .executeTakeFirst();
 
     if (article === undefined) {
