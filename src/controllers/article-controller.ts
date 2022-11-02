@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Request, Router } from "express";
 import { ErrorResponse } from "../models/errors";
 import { getArticle, getArticlePreviews } from "../services/article-service";
 
@@ -6,24 +6,10 @@ const publicArticleController = Router();
 
 // Get article previews
 publicArticleController.get("/preview", async (request, response) => {
-    const count = request.query.count === undefined ? Number.MAX_SAFE_INTEGER : Number.parseInt(request.query.count.toString(), 10);
-    const offset = request.query.offset === undefined ? 0 : Number.parseInt(request.query.offset.toString(), 10);
+    const { error, count, offset } = checkGetArticlePreviewsRequest(request);
 
-    if (isNaN(count)) {
-        const error: ErrorResponse = {
-            title: "Count invalid",
-            description: "Count invalid. Must be an integer."
-        };
-        response.status(400).json(error);
-        return;
-    }
-
-    if (isNaN(offset)) {
-        const error: ErrorResponse = {
-            title: "Offset invalid",
-            description: "Offset invalid. Must be an integer."
-        };
-        response.status(400).json(error);
+    if (error) {
+        response.status(error.code).json(error);
         return;
     }
 
@@ -39,14 +25,10 @@ publicArticleController.get("/preview", async (request, response) => {
 
 // Get article by id
 publicArticleController.get("/:id", async (request, response) => {
-    const articleId = Number.parseInt(request.params.id, 10);
+    const { error, articleId } = checkGetArticleByIdRequest(request);
 
-    if (isNaN(articleId)) {
-        const error: ErrorResponse = {
-            title: "Article ID invalid ",
-            description: "Article ID not provided or invalid. Must be an integer."
-        };
-        response.status(400).json(error);
+    if (error) {
+        response.status(error.code).json(error);
         return;
     }
 
@@ -59,5 +41,48 @@ publicArticleController.get("/:id", async (request, response) => {
 
     response.json(article);
 });
+
+function checkGetArticlePreviewsRequest(request: Request): { error?: ErrorResponse, count?: number, offset?: number } {
+    const count = request.query.count === undefined ? Number.MAX_SAFE_INTEGER : Number.parseInt(request.query.count.toString(), 10);
+    const offset = request.query.offset === undefined ? 0 : Number.parseInt(request.query.offset.toString(), 10);
+
+    if (isNaN(count)) {
+        return {
+            error: {
+                code: 400,
+                title: "Count invalid",
+                description: "Count invalid. Must be an integer."
+            }
+        };
+    }
+
+    if (isNaN(offset)) {
+        return {
+            error: {
+                code: 400,
+                title: "Offset invalid",
+                description: "Offset invalid. Must be an integer."
+            }
+        };
+    }
+
+    return { count, offset };
+}
+
+function checkGetArticleByIdRequest(request: Request): { error?: ErrorResponse, articleId?: number } {
+    const articleId = Number.parseInt(request.params.id, 10);
+
+    if (isNaN(articleId)) {
+        return {
+            error: {
+                code: 400,
+                title: "Article ID invalid ",
+                description: "Article ID not provided or invalid. Must be an integer."
+            }
+        };
+    }
+
+    return { articleId };
+}
 
 export { publicArticleController };
