@@ -23,7 +23,10 @@ async function getPlaceholderText({
 
     let url = `${config.placeholderTextApiUrl}/${paragraphs}/${paragraphLength}`;
 
-    if (decorations) url += "/decorate/link/ul";
+    if (decorations)
+        url += "/decorate/link/ul";
+    else
+        url += "/plaintext";
 
     const response = await fetch(url);
 
