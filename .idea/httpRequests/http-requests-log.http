@@ -1,3 +1,213 @@
+GET http://localhost:3000/article/preview?count=5&offset=3&padding=0
+Accept: application/json
+
+<> 2022-11-02T183705.404.txt
+
+###
+
+GET http://localhost:3000/article/preview?padding=0
+Accept: application/json
+
+<> 2022-11-02T183628.200.json
+
+###
+
+GET http://localhost:3000/article/8?padding=0
+Accept: application/json
+
+<> 2022-11-02T183622.404.txt
+
+###
+
+GET http://localhost:3000/article/8?padding=1
+Accept: application/json
+
+<> 2022-11-02T183616.200.json
+
+###
+
+GET http://localhost:3000/article/8
+Accept: application/json
+
+<> 2022-11-02T183556.404.txt
+
+###
+
+GET http://localhost:3000/article/9
+Accept: application/json
+
+<> 2022-11-02T183552.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183543.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183504.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183451.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183356.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183300.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183125.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183123.200.json
+
+###
+
+GET http://localhost:3000/article/preview?padding=1
+Accept: application/json
+
+<> 2022-11-02T183050.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=5&padding=1
+Accept: application/json
+
+<> 2022-11-02T183006.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183004.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183003.200.json
+
+###
+
+GET http://localhost:3000/article/10
+Accept: application/json
+
+<> 2022-11-02T183001.200.json
+
+###
+
+GET https://yatd-news.cyclic.app/article/10
+Accept: application/json
+
+<> 2022-11-02T182957.200.json
+
+###
+
+GET https://yatd-news.cyclic.app/article/9
+Accept: application/json
+
+<> 2022-11-02T182952.200.json
+
+###
+
+GET https://yatd-news.cyclic.app/article/preview?count=5&padding=1
+Accept: application/json
+
+<> 2022-11-02T182945.200.json
+
+###
+
+GET https://yatd-news.cyclic.app/article/9
+Accept: application/json
+
+<> 2022-11-02T182943.200.json
+
+###
+
+GET https://yatd-news.cyclic.app/article/8
+Accept: application/json
+
+<> 2022-11-02T182937.200.json
+
+###
+
+GET https://yatd-news.cyclic.app/article/8
+Accept: application/json
+
+<> 2022-11-02T182936.200.json
+
+###
+
+GET http://localhost:3000/article/8
+Accept: application/json
+
+<> 2022-11-02T182930.200.json
+
+###
+
+GET http://localhost:3000/article/9
+Accept: application/json
+
+<> 2022-11-02T182921.200.json
+
+###
+
+GET http://localhost:3000/article/9
+Accept: application/json
+
+<> 2022-11-02T182919.200.json
+
+###
+
+GET http://localhost:3000/article/9
+Accept: application/json
+
+<> 2022-11-02T182911.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=5&padding=1
+Accept: application/json
+
+<> 2022-11-02T182907.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=5&padding=1
+Accept: application/json
+
+<> 2022-11-02T180947.200.json
+
+###
+
 GET http://localhost:3000/article/preview?count=5&padding=1
 Accept: application/json
 
@@ -133,211 +343,5 @@ GET http://localhost:3000/article/preview
 Accept: application/json
 
 <> 2022-10-07T170859.200.json
-
-###
-
-GET http://localhost:3000/article/8
-Accept: application/json
-
-<> 2022-10-07T164930.404.txt
-
-###
-
-GET http://localhost:3000/article/preview
-Accept: application/json
-
-<> 2022-10-07T164925.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview
-Accept: application/json
-
-<> 2022-10-07T163333.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview
-Accept: application/json
-
-<> 2022-10-07T163112.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/health
-Accept: application/json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/health
-Accept: application/json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/8
-Accept: application/json
-
-<> 2022-10-07T161733.404.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/asd
-Accept: application/json
-
-<> 2022-10-07T161725.400.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview
-Accept: application/json
-
-<> 2022-10-07T161708.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/8
-Accept: application/json
-
-<> 2022-10-07T161707.404.txt
-
-###
-
-GET http://localhost:3000/article/8
-Accept: application/json
-
-<> 2022-10-07T161657.200.json
-
-###
-
-GET http://localhost:3000/article/preview
-Accept: application/json
-
-<> 2022-10-07T161654.200.json
-
-###
-
-GET http://localhost:3000/article/preview
-Accept: application/json
-
-<> 2022-10-07T161521.200.json
-
-###
-
-GET http://localhost:3000/article/8
-Accept: application/json
-
-<> 2022-10-07T161519.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/8
-Accept: application/json
-
-<> 2022-10-07T161457.404.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/7
-Accept: application/json
-
-<> 2022-10-07T161450.404.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview
-Accept: application/json
-
-<> 2022-10-07T161449.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview
-Accept: application/json
-
-<> 2022-10-07T161353.200.json
-
-###
-
-GET http://localhost:3000/article/preview
-Accept: application/json
-
-<> 2022-10-07T161341.200.json
-
-###
-
-GET http://localhost:3000/article/preview
-Accept: application/json
-
-<> 2022-10-07T161310.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview
-Accept: application/json
-
-<> 2022-10-07T161117.200.json
-
-###
-
-GET https://news.yatd.wagnrd.de/health
-Accept: application/json
-
-<> 2022-10-07T141442.200.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/health
-Accept: application/json
-
-<> 2022-10-07T122501.200.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/health
-Accept: application/json
-
-<> 2022-10-06T172903.200.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/health
-Accept: application/json
-
-<> 2022-10-06T172619.200.txt
-
-###
-
-GET http://localhost:3000/health
-Accept: application/json
-
-<> 2022-10-06T172614.200.txt
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/7
-Accept: application/json
-
-<> 2022-10-06T172415.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/article/preview?count=1&offset=1
-Accept: application/json
-
-<> 2022-10-06T172412.200.json
-
-###
-
-GET http://localhost:3000/health
-Accept: application/json
-
-<> 2022-10-06T170056.200.txt
-
-###
-
-GET http://localhost:3000/healthz
-Accept: application/json
-
-<> 2022-10-06T165914.200.txt
 
 ###

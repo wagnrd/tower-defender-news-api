@@ -1,42 +1,46 @@
+import { config } from "../config";
 import { database } from "../clients/database";
 import { ArticlePreview, toArticlePreviewArray } from "../models/article-preview";
 import { Article, toArticle } from "../models/article";
-import { getLoremIpsumText } from "../clients/lorem-ipsum-client";
+import { getPlaceholderText } from "../clients/placeholder-text-client";
 
 async function getArticlePreviews(count: number, offset: number, padding: boolean): Promise<ArticlePreview[]> {
-    const articles = await database.selectFrom("article")
-                                   .select(["id", "headline", "description", "publishTimestamp", "thumbnailUrl"])
-                                   .where("publishTimestamp", "<=", Date.now())
-                                   .orderBy("publishTimestamp", "desc")
-                                   .offset(offset)
-                                   .limit(count)
-                                   .execute();
+    const articlePreviewDAOs = await database.selectFrom("article")
+                                             .select(
+                                                 ["id", "headline", "description", "publishTimestamp", "thumbnailUrl"])
+                                             .where("publishTimestamp", "<=", Date.now())
+                                             .orderBy("publishTimestamp", "desc")
+                                             .offset(offset)
+                                             .limit(count)
+                                             .execute();
 
-    if (articles === undefined) return [];
+    const articlePreviews = articlePreviewDAOs ? toArticlePreviewArray(articlePreviewDAOs) : [];
 
-    const result = toArticlePreviewArray(articles);
-
-    if (padding && result.length < count) {
-        const paddingCount = Math.min(count - result.length, 20);
+    if (padding && articlePreviews.length < count) {
+        const paddingCount = Math.min(count - articlePreviews.length, 50);
         const paddingArticles = await generateArticlePreviews(paddingCount,
-                                                              result[result.length - 1].id - paddingCount);
+                                                              articlePreviews[articlePreviews.length - 1].id - paddingCount);
         paddingArticles.reverse();
-        result.push(...paddingArticles);
+        articlePreviews.push(...paddingArticles);
     }
 
-    return result;
+    return articlePreviews;
 }
 
-async function getArticle(id: number): Promise<Article> {
-    const article = await database.selectFrom("article")
-                                  .select(["id", "headline", "body", "publishTimestamp"])
-                                  .where("id", "=", id)
-                                  .where("publishTimestamp", "<=", Date.now())
-                                  .executeTakeFirst();
+async function getArticle(id: number, padding: boolean): Promise<Article> {
+    const articleDAO = await database.selectFrom("article")
+                                     .select(["id", "headline", "body", "publishTimestamp"])
+                                     .where("id", "=", id)
+                                     .where("publishTimestamp", "<=", Date.now())
+                                     .executeTakeFirst();
 
-    if (article === undefined) return undefined;
+    if (articleDAO) {
+        return toArticle(articleDAO);
+    } else if (padding) {
+        return generateArticle(id);
+    }
 
-    return toArticle(article);
+    return undefined;
 }
 
 async function generateArticle(id = 0): Promise<Article> {
@@ -44,13 +48,11 @@ async function generateArticle(id = 0): Promise<Article> {
         id,
         timestamp: Date.now(),
         headline: `Lorem ipsum ${id}!`,
-        body: await getLoremIpsumText({
-                                          paragraphs: 4,
-                                          paragraphLength: "long",
-                                          decorations: true,
-                                          links: true,
-                                          lists: true
-                                      }),
+        body: await getPlaceholderText({
+                                           paragraphs: 4,
+                                           paragraphLength: "long",
+                                           decorations: true
+                                       }),
     };
 }
 
@@ -63,13 +65,12 @@ async function generateArticlePreviews(count: number, startId = 0): Promise<Arti
                                  id,
                                  timestamp,
                                  headline: `Lorem ipsum ${id}!`,
-                                 description: await getLoremIpsumText({
-                                                                          paragraphs: 1,
-                                                                          paragraphLength: "short",
-                                                                          decorations: false,
-                                                                          links: false,
-                                                                          lists: false
-                                                                      })
+                                 description: await getPlaceholderText({
+                                                                           paragraphs: 1,
+                                                                           paragraphLength: "short",
+                                                                           decorations: false
+                                                                       }),
+                                 thumbnailUrl: config.placeholderApi.imageUrl
                              });
     }
 

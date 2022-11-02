@@ -25,16 +25,16 @@ publicArticleController.get("/preview", async (request, response) => {
 
 // Get article by id
 publicArticleController.get("/:id", async (request, response) => {
-    const { error, articleId } = checkGetArticleByIdRequest(request);
+    const { error, articleId, padding } = checkGetArticleByIdRequest(request);
 
     if (error) {
         response.status(error.code).json(error);
         return;
     }
 
-    const article = getArticle(articleId);
+    const article = await getArticle(articleId, padding);
 
-    if (article === undefined) {
+    if (!article) {
         response.sendStatus(404);
         return;
     }
@@ -51,8 +51,8 @@ function checkGetArticlePreviewsRequest(request: Request): {
     const count = request.query.count === undefined ?
                   Number.MAX_SAFE_INTEGER :
                   Number.parseInt(request.query.count.toString(), 10);
-    const offset = request.query.offset === undefined ? 0 : Number.parseInt(request.query.offset.toString(), 10);
-    const padding = request.query.padding === undefined ? 0 : Number.parseInt(request.query.padding.toString(), 10);
+    const offset = !request.query.offset ? 0 : Number.parseInt(request.query.offset.toString(), 10);
+    const padding = !request.query.padding ? 0 : Number.parseInt(request.query.padding.toString(), 10);
 
     if (isNaN(count)) {
         return {
@@ -91,8 +91,13 @@ function checkGetArticlePreviewsRequest(request: Request): {
     };
 }
 
-function checkGetArticleByIdRequest(request: Request): { error?: ErrorResponse, articleId?: number } {
+function checkGetArticleByIdRequest(request: Request): {
+    error?: ErrorResponse,
+    articleId?: number,
+    padding?: boolean
+} {
     const articleId = Number.parseInt(request.params.id, 10);
+    const padding = !request.query.padding ? 0 : Number.parseInt(request.query.padding.toString(), 10);
 
     if (isNaN(articleId)) {
         return {
@@ -104,7 +109,20 @@ function checkGetArticleByIdRequest(request: Request): { error?: ErrorResponse, 
         };
     }
 
-    return { articleId };
+    if (isNaN(padding)) {
+        return {
+            error: {
+                code: 400,
+                title: "Padding invalid",
+                description: "Padding invalid. Must be an integer: 0 = false; !0 = true."
+            }
+        };
+    }
+
+    return {
+        articleId,
+        padding: Boolean(padding)
+    };
 }
 
 export { publicArticleController };
