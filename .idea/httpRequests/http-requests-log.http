@@ -1,3 +1,24 @@
+GET http://localhost:3000/article/preview?count=5&offset=0&padding=1
+Accept: application/json
+
+<> 2022-11-02T184445.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=5&offset=0&padding=0
+Accept: application/json
+
+<> 2022-11-02T184438.200.json
+
+###
+
+GET http://localhost:3000/article/preview?count=5&offset=3&padding=1
+Accept: application/json
+
+<> 2022-11-02T184104.200.json
+
+###
+
 GET http://localhost:3000/article/preview?count=5&offset=3&padding=0
 Accept: application/json
 
@@ -324,24 +345,5 @@ GET http://localhost:3000/article/9
 Accept: application/json
 
 <> 2022-11-02T134129.200.json
-
-###
-
-GET https://tower-defender-news-api.onrender.com/health
-Accept: application/json
-
-###
-
-GET http://localhost:3000/article/9
-Accept: application/json
-
-<> 2022-10-07T170904.200.json
-
-###
-
-GET http://localhost:3000/article/preview
-Accept: application/json
-
-<> 2022-10-07T170859.200.json
 
 ###
