@@ -4,7 +4,7 @@
   "description": "News API for the tower-defender project",
   "main": "build/index.js",
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "prebuild": "npm i && tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "dev": "npm run build && node .",
     "start": "node .",
