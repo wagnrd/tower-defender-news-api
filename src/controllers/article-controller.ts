@@ -1,6 +1,6 @@
-import { database } from "../database";
 import { Router } from "express";
-import { ErrorResponse, toArticle, toArticlePreviewArray } from "../models";
+import { ErrorResponse } from "../models/errors";
+import { getArticle, getArticlePreviews } from "../services/article-service";
 
 const publicArticleController = Router();
 
@@ -27,21 +27,14 @@ publicArticleController.get("/preview", async (request, response) => {
         return;
     }
 
-    const articles = await database.selectFrom("article")
-        .select(["id", "headline", "description", "publishTimestamp", "thumbnailUrl"])
-        .where("publishTimestamp", "<=", Date.now())
-        .orderBy("publishTimestamp", "desc")
-        .offset(offset)
-        .limit(count)
-        .execute();
+    const articlePreviews = await getArticlePreviews(count, offset);
 
-    if (articles === undefined) {
+    if (articlePreviews.length === 0) {
         response.sendStatus(404);
         return;
     }
 
-    const result = toArticlePreviewArray(articles);
-    response.json(result);
+    response.json(articlePreviews);
 });
 
 // Get article by id
@@ -57,19 +50,14 @@ publicArticleController.get("/:id", async (request, response) => {
         return;
     }
 
-    const article = await database.selectFrom("article")
-        .select(["id", "headline", "body", "publishTimestamp"])
-        .where("id", "=", articleId)
-        .where("publishTimestamp", "<=", Date.now())
-        .executeTakeFirst();
+    const article = getArticle(articleId);
 
     if (article === undefined) {
         response.sendStatus(404);
         return;
     }
 
-    const result = toArticle(article);
-    response.json(result);
+    response.json(article);
 });
 
 export { publicArticleController };
