@@ -1,4 +1,3 @@
-import { config } from "../config";
 import { database } from "../clients/database";
 import { ArticlePreview, toArticlePreviewArray } from "../models/article-preview";
 import { Article, toArticle } from "../models/article";
@@ -66,10 +65,9 @@ async function generateArticlePreviews(count: number, startId = 0): Promise<Arti
                                  headline: `Lorem ipsum ${id}!`,
                                  description: await getPlaceholderText({
                                                                            paragraphs: 1,
-                                                                           paragraphLength: "short",
+                                                                           paragraphLength: "veryshort",
                                                                            decorations: false
-                                                                       }),
-                                 thumbnailUrl: config.placeholderApi.imageUrl
+                                                                       })
                              });
     }
 

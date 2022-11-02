@@ -13,16 +13,13 @@ interface PlaceholderApiConfig {
 
 interface Config {
     port: number;
-    placeholderApi: PlaceholderApiConfig;
+    placeholderTextApiUrl: string;
     database: DatabaseConfig;
 }
 
 const config: Config = {
     port: Number.parseInt(process.env.PORT, 10) || 3000,
-    placeholderApi: {
-        textUrl: "https://loripsum.net/api",
-        imageUrl: "https://picsum.photos/800/450",
-    },
+    placeholderTextApiUrl: "https://loripsum.net/api",
     database: {
         host: process.env.MYSQL_HOST,
         port: Number.parseInt(process.env.MYSQL_PORT, 10),
