@@ -1,17 +1,18 @@
 import { Router } from "express";
-import { database } from "../database";
+import { database } from "../clients/database";
 
 const publicHealthCheckController = Router();
 
 publicHealthCheckController.get("/", async (request, response) => {
     const health = await database.selectFrom("health")
-        .selectAll()
-        .executeTakeFirst();
+                                 .selectAll()
+                                 .executeTakeFirst();
 
-    if (health.test === "works")
+    if (health.test === "works") {
         response.sendStatus(204);
-    else
+    } else {
         response.sendStatus(500);
+    }
 });
 
 export { publicHealthCheckController };

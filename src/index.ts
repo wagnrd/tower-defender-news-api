@@ -2,14 +2,14 @@ import express from "express";
 import cors from "cors";
 import { publicArticleController } from "./controllers/article-controller";
 import { publicHealthCheckController } from "./controllers/heath-check-controller";
+import { config } from "./config";
 
-const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors());
 app.use("/health", publicHealthCheckController);
 app.use("/article", publicArticleController);
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}!`);
+app.listen(config.port, () => {
+    console.log(`Server is running on http://localhost:${config.port}!`);
 });

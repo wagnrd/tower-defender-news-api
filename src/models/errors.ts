@@ -1,5 +1,5 @@
 interface ErrorResponse {
-    code: number,
+    code: number;
     title: string;
     description: string;
 }

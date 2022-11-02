@@ -6,14 +6,14 @@ const publicArticleController = Router();
 
 // Get article previews
 publicArticleController.get("/preview", async (request, response) => {
-    const { error, count, offset } = checkGetArticlePreviewsRequest(request);
+    const { error, count, offset, padding } = checkGetArticlePreviewsRequest(request);
 
     if (error) {
         response.status(error.code).json(error);
         return;
     }
 
-    const articlePreviews = await getArticlePreviews(count, offset);
+    const articlePreviews = await getArticlePreviews(count, offset, padding);
 
     if (articlePreviews.length === 0) {
         response.sendStatus(404);
@@ -42,9 +42,17 @@ publicArticleController.get("/:id", async (request, response) => {
     response.json(article);
 });
 
-function checkGetArticlePreviewsRequest(request: Request): { error?: ErrorResponse, count?: number, offset?: number } {
-    const count = request.query.count === undefined ? Number.MAX_SAFE_INTEGER : Number.parseInt(request.query.count.toString(), 10);
+function checkGetArticlePreviewsRequest(request: Request): {
+    error?: ErrorResponse,
+    count?: number,
+    offset?: number,
+    padding?: boolean
+} {
+    const count = request.query.count === undefined ?
+                  Number.MAX_SAFE_INTEGER :
+                  Number.parseInt(request.query.count.toString(), 10);
     const offset = request.query.offset === undefined ? 0 : Number.parseInt(request.query.offset.toString(), 10);
+    const padding = request.query.padding === undefined ? 0 : Number.parseInt(request.query.padding.toString(), 10);
 
     if (isNaN(count)) {
         return {
@@ -66,7 +74,21 @@ function checkGetArticlePreviewsRequest(request: Request): { error?: ErrorRespon
         };
     }
 
-    return { count, offset };
+    if (isNaN(padding)) {
+        return {
+            error: {
+                code: 400,
+                title: "Padding invalid",
+                description: "Padding invalid. Must be an integer: 0 = false; !0 = true."
+            }
+        };
+    }
+
+    return {
+        count,
+        offset,
+        padding: Boolean(padding)
+    };
 }
 
 function checkGetArticleByIdRequest(request: Request): { error?: ErrorResponse, articleId?: number } {

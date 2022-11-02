@@ -1,5 +1,9 @@
 # tower-defender-news-api
 
+### Hosting
+
+Hosted on [Cyclic](https://app.cyclic.sh/#/).
+
 ### Environemnt variables
 
 - MYSQL_HOST

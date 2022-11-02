@@ -1,5 +1,5 @@
 ### GET article previews
-GET {{host}}/article/preview
+GET {{host}}/article/preview?count=5&padding=1
 Accept: application/json
 
 ### GET article by id

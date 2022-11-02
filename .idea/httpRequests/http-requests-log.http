@@ -1,3 +1,59 @@
+GET http://localhost:3000/article/preview?count=5&padding=1
+Accept: application/json
+
+<> 2022-11-02T142633.200.json
+
+###
+
+GET http://localhost:3000/article/preview?padding=true
+Accept: application/json
+
+<> 2022-11-02T135522.400.json
+
+###
+
+GET http://localhost:3000/article/preview?padding=true
+Accept: application/json
+
+<> 2022-11-02T134948.400.json
+
+###
+
+GET http://localhost:3000/article/preview?padding=true
+Accept: application/json
+
+<> 2022-11-02T134945.400.json
+
+###
+
+GET http://localhost:3000/article/preview?padding=false
+Accept: application/json
+
+<> 2022-11-02T134937.400.json
+
+###
+
+GET http://localhost:3000/article/preview?padding=true
+Accept: application/json
+
+<> 2022-11-02T134928.400.json
+
+###
+
+GET http://localhost:3000/article/preview
+Accept: application/json
+
+<> 2022-11-02T134857.200.json
+
+###
+
+GET http://localhost:3000/article/9
+Accept: application/json
+
+<> 2022-11-02T134129.200.json
+
+###
+
 GET https://tower-defender-news-api.onrender.com/health
 Accept: application/json
 
@@ -283,61 +339,5 @@ GET http://localhost:3000/article/preview?count=1&offset=1
 Accept: application/json
 
 <> 2022-10-06T162747.200.json
-
-###
-
-GET http://localhost:3000/article/preview?count=1&offset=2
-Accept: application/json
-
-<> 2022-10-06T162743.200.json
-
-###
-
-GET http://localhost:3000/article/preview?count=1&offset=asdf
-Accept: application/json
-
-<> 2022-10-06T162738.400.json
-
-###
-
-GET http://localhost:3000/article/preview?count=asdf&offset=asdf
-Accept: application/json
-
-<> 2022-10-06T162731.400.json
-
-###
-
-GET http://localhost:3000/article/preview?count=2&offset=asdf
-Accept: application/json
-
-<> 2022-10-06T162705.400.json
-
-###
-
-GET http://localhost:3000/article/preview?count=2&offset=1
-Accept: application/json
-
-<> 2022-10-06T162650.200.json
-
-###
-
-GET http://localhost:3000/article/preview?count=asdf&offset=1
-Accept: application/json
-
-<> 2022-10-06T162639.200.json
-
-###
-
-GET http://localhost:3000/article/preview?count=asdf&offset=1
-Accept: application/json
-
-<> 2022-10-06T162559.200.json
-
-###
-
-GET http://localhost:3000/article/preview?count=asdf&offset=1
-Accept: application/json
-
-<> 2022-10-06T161943.400.json
 
 ###

@@ -1,7 +1,7 @@
 interface ArticlePreview {
     id: number;
     timestamp: number;
-    thumbnailUrl: string;
+    thumbnailUrl?: string;
     headline: string;
     description: string;
 }
@@ -19,8 +19,9 @@ function toArticlePreview(arbitraryArticle: any): ArticlePreview {
 function toArticlePreviewArray(arbitraryArticles: any[]): ArticlePreview[] {
     const articlePreviews: ArticlePreview[] = [];
 
-    for (const articleWithDetails of arbitraryArticles)
+    for (const articleWithDetails of arbitraryArticles) {
         articlePreviews.push(toArticlePreview(articleWithDetails));
+    }
 
     return articlePreviews;
 }
