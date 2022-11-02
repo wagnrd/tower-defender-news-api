@@ -18,9 +18,9 @@ async function getArticlePreviews(count: number, offset: number, padding: boolea
 
     if (padding && result.length < count) {
         const paddingCount = Math.min(count - result.length, 20);
-        console.info("[article-previews] Padding enabled. Generating", paddingCount, "articles...");
         const paddingArticles = await generateArticlePreviews(paddingCount,
-                                                              result[result.length - 1].id + 1);
+                                                              result[result.length - 1].id - paddingCount);
+        paddingArticles.reverse();
         result.push(...paddingArticles);
     }
 
@@ -56,11 +56,12 @@ async function generateArticle(id = 0): Promise<Article> {
 
 async function generateArticlePreviews(count: number, startId = 0): Promise<ArticlePreview[]> {
     const articlePreviews: ArticlePreview[] = [];
+    const timestamp = Date.now();
 
-    for (let id = startId; id <= startId + count; ++id) {
+    for (let id = startId; id < startId + count; ++id) {
         articlePreviews.push({
                                  id,
-                                 timestamp: Date.now(),
+                                 timestamp,
                                  headline: `Lorem ipsum ${id}!`,
                                  description: await getLoremIpsumText({
                                                                           paragraphs: 1,
@@ -70,7 +71,6 @@ async function generateArticlePreviews(count: number, startId = 0): Promise<Arti
                                                                           lists: false
                                                                       })
                              });
-        console.info("[article-previews] Article with id", id, "generated");
     }
 
     return articlePreviews;
