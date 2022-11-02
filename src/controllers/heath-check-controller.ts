@@ -1,5 +1,5 @@
-import {Router} from "express";
-import {database} from "../database";
+import { Router } from "express";
+import { database } from "../database";
 
 const publicHealthCheckController = Router();
 
@@ -14,4 +14,4 @@ publicHealthCheckController.get("/", async (request, response) => {
         response.sendStatus(500);
 });
 
-export {publicHealthCheckController};
+export { publicHealthCheckController };

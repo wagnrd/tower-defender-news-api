@@ -1,5 +1,5 @@
-import {Generated, Kysely, MysqlDialect} from "kysely";
-import {createPool} from "mysql2";
+import { Generated, Kysely, MysqlDialect } from "kysely";
+import { createPool } from "mysql2";
 
 interface ArticleDAO {
     id: Generated<number>;
@@ -32,4 +32,4 @@ const database = new Kysely<DatabaseDAO>({
     })
 });
 
-export {database};
+export { database };

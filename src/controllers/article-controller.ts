@@ -1,6 +1,6 @@
-import {database} from "../database";
-import {Router} from "express";
-import {ErrorResponse, toArticle, toArticlePreviewArray} from "../models";
+import { database } from "../database";
+import { Router } from "express";
+import { ErrorResponse, toArticle, toArticlePreviewArray } from "../models";
 
 const publicArticleController = Router();
 
@@ -72,4 +72,4 @@ publicArticleController.get("/:id", async (request, response) => {
     response.json(result);
 });
 
-export {publicArticleController};
+export { publicArticleController };
