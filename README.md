@@ -2,7 +2,7 @@
 
 ### Hosting
 
-Hosted on [Cyclic](https://app.cyclic.sh/#/).
+Hosted on [Render](https://dashboard.render.com/web/srv-cdhc8cien0hl21lh6oug).
 
 ### Environemnt variables
 

@@ -1,3 +1,8 @@
+GET https://yatd-news.onrender.com/health
+Accept: application/json
+
+###
+
 GET https://yatd-news.onrender.com/article/preview?count=5&offset=0&padding=1
 Accept: application/json
 
@@ -338,12 +343,5 @@ GET http://localhost:3000/article/preview?padding=true
 Accept: application/json
 
 <> 2022-11-02T134945.400.json
-
-###
-
-GET http://localhost:3000/article/preview?padding=false
-Accept: application/json
-
-<> 2022-11-02T134937.400.json
 
 ###
