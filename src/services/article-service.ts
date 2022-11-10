@@ -17,7 +17,9 @@ async function getArticlePreviews(count: number, offset: number, padding: boolea
 
     if (padding && articlePreviews.length < count) {
         const paddingCount = Math.min(count - articlePreviews.length, 50);
-        const startId = articlePreviews.length > 0 ? articlePreviews[articlePreviews.length - 1].id - paddingCount : 0;
+        const startId = articlePreviews.length > 0 ?
+                        articlePreviews[articlePreviews.length - 1].id - paddingCount :
+                        -offset;
         const paddingArticles = await generateArticlePreviews(paddingCount, startId);
         articlePreviews.push(...paddingArticles.reverse());
     }
