@@ -1,3 +1,17 @@
+GET https://yatd-news.onrender.com/articlse/preview?count=5&offset=0&padding=1
+Accept: application/json
+
+<> 2022-11-10T131536.404.html
+
+###
+
+GET https://yatd-news.onrender.com/article/previsew?count=5&offset=0&padding=1
+Accept: application/json
+
+<> 2022-11-10T131523.400.json
+
+###
+
 GET http://localhost:3000/article/preview?count=5&offset=0&padding=1
 Accept: application/json
 
@@ -327,19 +341,5 @@ GET http://localhost:3000/article/8
 Accept: application/json
 
 <> 2022-11-02T182930.200.json
-
-###
-
-GET http://localhost:3000/article/9
-Accept: application/json
-
-<> 2022-11-02T182921.200.json
-
-###
-
-GET http://localhost:3000/article/9
-Accept: application/json
-
-<> 2022-11-02T182919.200.json
 
 ###
