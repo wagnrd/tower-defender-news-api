@@ -15,11 +15,6 @@ publicArticleController.get("/preview", async (request, response) => {
 
     const articlePreviews = await getArticlePreviews(count, offset, padding);
 
-    if (articlePreviews.length === 0) {
-        response.sendStatus(204);
-        return;
-    }
-
     response.json(articlePreviews);
 });
 

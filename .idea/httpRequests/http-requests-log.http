@@ -1,3 +1,34 @@
+GET https://yatd-news.onrender.com/article/preview?count=0&offset=0&padding=1
+Accept: application/json
+
+###
+
+GET https://yatd-news.onrender.com/article/preview?count=1&offset=0&padding=1
+Accept: application/json
+
+<> 2022-11-10T134529.200.json
+
+###
+
+GET https://yatd-news.onrender.com/article/preview?count=0&offset=0&padding=1
+Accept: application/json
+
+<> 2022-11-10T134523.404.txt
+
+###
+
+GET http://localhost:3000/article/preview?count=0&offset=0&padding=1
+Accept: application/json
+
+###
+
+GET https://yatd-news.onrender.com/article/preview?count=0&offset=0&padding=1
+Accept: application/json
+
+<> 2022-11-10T133920.404.txt
+
+###
+
 GET https://yatd-news.onrender.com/articlse/preview?count=5&offset=0&padding=1
 Accept: application/json
 
@@ -306,40 +337,5 @@ GET https://yatd-news.cyclic.app/article/9
 Accept: application/json
 
 <> 2022-11-02T182952.200.json
-
-###
-
-GET https://yatd-news.cyclic.app/article/preview?count=5&padding=1
-Accept: application/json
-
-<> 2022-11-02T182945.200.json
-
-###
-
-GET https://yatd-news.cyclic.app/article/9
-Accept: application/json
-
-<> 2022-11-02T182943.200.json
-
-###
-
-GET https://yatd-news.cyclic.app/article/8
-Accept: application/json
-
-<> 2022-11-02T182937.200.json
-
-###
-
-GET https://yatd-news.cyclic.app/article/8
-Accept: application/json
-
-<> 2022-11-02T182936.200.json
-
-###
-
-GET http://localhost:3000/article/8
-Accept: application/json
-
-<> 2022-11-02T182930.200.json
 
 ###
